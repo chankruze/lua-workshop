@@ -1,0 +1,11 @@
+require "testwell"
+is(6, 1 + 2 * 3 - 1, 'Multiplication done before addition and subtraction')
+is(8, (1 + 2) * 3 - 1, 'Parentheses change priority of operations')
+is(6, (1 + 2) * (3 - 1), 'Parentheses are calculated left-to-right')
+is(1, 12 / 4 / 3, 'Same priority operations [division] done left-to-right')
+is(9, 12 / 4 * 3, 'Same priority operations [mixed] done left-to-right')
+is(1, 12 / (4 * 3), 'Same priority operations [mixed] with grouping')
+is(5, 14 - 6 - 3, 'Same priority operations [subtraction] done left-to-right')
+is(11, 14 - (6 - 3), 'Same priority operations [subtraction] with grouping')
+is(3.0, 2 * 1.5, 'Numbers may include a decimal point')
+report()
